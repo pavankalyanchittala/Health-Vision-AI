@@ -54,7 +54,7 @@ Meningioma: A tumor that arises from the meninges, which are the protective memb
 
 Pituitary adenoma: A tumor that develops in the pituitary gland, which is located at the base of the brain. Pituitary adenomas can affect hormone production and cause a variety of symptoms, depending on the hormones that are affected.""")
 st.divider()
-st.write("The problems caused by glaucoma include a gradual loss of peripheral (side) vision, which can go unnoticed until it becomes severe. In advanced stages, central vision can also be affected. While there is no cure for glaucoma, early detection and treatment can help slow or prevent vision loss. Treatment may include eye drops, medication, laser surgery, or traditional surgery to lower the pressure in the eye.""")
+st.write("The problems caused by glaucoma include a gradual loss of peripheral (side) vision, which can go unnoticed until it becomes severe. In advanced stages, central vision can also be affected. While there is no cure for glaucoma, early detection and treatment can help slow or prevent vision loss. Treatment may include eye drops, medication, laser surgery, or traditional surgery to lower the pressure in the eye.")
 st.divider()
 st.write("Hence, we have developed A Convolutional Neural Network (CNN) to predict whether the MRI Scan of the brain has a tumour or not. It has been trained on more than 1000 images divided into four classes, to upto 50 epochs.")
 st.divider()
@@ -82,12 +82,13 @@ if x:
             <h1>It is Negative for Brain Tumors</h1>
             """
         )
+        st.write(f"Accuracy: {conf*100:.2f}%")
     elif y.strip() == "Glioma":
         components.html(
             """
             <style>
             h1{
-                background: -webkit-linear-gradient(0.25turn,#FF4C4B, #F70000);
+                background: -webkit-linear-gradient(0.25turn,#01CCF7, #8BF5F5);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 font-family: "Source Sans Pro", sans-serif;
@@ -96,6 +97,7 @@ if x:
             <h1>It is Positive for Glioma</h1>
             """
         )
+        st.write(f"Accuracy: {conf*100:.2f}%")
     elif y.strip() == "Meningioma":
         components.html(
             """
@@ -110,6 +112,7 @@ if x:
             <h1>It is Positive for Meningioma</h1>
             """
         )
+        st.write(f"Accuracy: {conf*100:.2f}%")
     else:
         components.html(
             """
@@ -124,3 +127,4 @@ if x:
             <h1>It is Positive for Pituitary</h1>
             """
         )
+        st.write(f"Accuracy: {conf*100:.2f}%")
