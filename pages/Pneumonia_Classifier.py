@@ -74,6 +74,7 @@ if x:
             <h1>It is not Pneumomnia</h1>
             """
         )
+        st.write(f"Accuracy: {conf*100:.2f}%")
     else:
         components.html(
             """
@@ -88,3 +89,4 @@ if x:
             <h1>It is Pneumomnia</h1>
             """
         )
+        st.write(f"Accuracy: {conf*100:.2f}%")
