@@ -71,6 +71,7 @@ if x:
             <h1>It is Negative for Covid 19</h1>
             """
         )
+        st.write(f"Accuracy: {conf*100:.2f}%")
     else:
         components.html(
             """
@@ -85,3 +86,4 @@ if x:
             <h1>It is Positive for Covid 19</h1>
             """
         )
+        st.write(f"Accuracy: {conf*100:.2f}%")
