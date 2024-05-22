@@ -90,6 +90,7 @@ if x:
             <h1>It is Normal</h1>
             """
         )
+        st.write(f"Accuracy: {conf*100:.2f}%")
     else:
         components.html(
             """
@@ -104,5 +105,4 @@ if x:
             <h1>Tuberculosis Detected</h1>
             """
         )
-    
-
+        st.write(f"Accuracy: {conf*100:.2f}%")
